@@ -2,35 +2,35 @@
 
 def q1(): 
   word = input("In: ")
-  if word[-1:] == "y": 
-    print("-ies")
+  if word[-3:] == "ife":
+    print("-ives")
   elif word[-2:] == "ey": 
     print("-eys")
-  elif word[-3:] == "ife":
-    print("-ives")
+  elif word[-1:] == "y": 
+    print("-ies")
   else: 
     print("-s")
 
 
 def q2(): 
   num = int(input("In: "))
-  if num % 2 == 0:
+  if num > 0:
     print(f"{num} is positive")
-  elif num % 2 != 0:
+  elif num < 0:
     print(f"{num} is negative")
-  else: 
-    print("")
+  
 
 def q3():
-  sidewon = input("Input a number: : ") 
-  sidetwo = input("Input a number: ")
-  sidethree = input("Input a number: ")
-  if sidewon == sidetwo == sidethree:
-    print("Equilateral")
-  elif sidewon == sidetwo and sidewon != sidethree and sidewon == sidethree and sidewon != sidetwo:
-    print("Isosceles")
-  elif sidewon != sidetwo != sidethree:
-    print("Scalene")
+  sidewon = float(input("Input a number: ")) 
+  sidetwo = float(input("Input a number: "))
+  sidethree = float(input("Input a number: "))
+  if sidewon + sidetwo > sidethree and sidewon + sidethree > sidetwo and sidetwo + sidethree > sidewon:
+    if sidewon == sidetwo == sidethree:
+      print("Equilateral")
+    elif sidewon == sidetwo or sidewon == sidethree or sidetwo == sidethree:
+      print("Isosceles")
+    else: 
+      print("Scalene")
   else:
     print("No Triangle")
 #Do not alter the following code
